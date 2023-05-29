@@ -29,12 +29,16 @@ css = """
             background-size: cover;
             background-position: center;
         }
+
+        .schedule-image {
+            background-repeat: no-repeat;
+        }
     </style>
 """
 st.markdown(css, unsafe_allow_html=True)
 
 # List of background images
-background_images = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image4.jpeg"]
+background_images = ["D:\Stremlit-Projects\Extensions_S\dailyScheduler\image1.jpg", "D:\Stremlit-Projects\Extensions_S\dailyScheduler\image2.jpg", "D:\Stremlit-Projects\Extensions_S\dailyScheduler\image3.jpg", "D:\Stremlit-Projects\Extensions_S\dailyScheduler\image4.jpg"]
 
 # Create checkboxes for each activity
 for time_slot, activity in schedule:
@@ -44,5 +48,5 @@ for time_slot, activity in schedule:
         if edited_activity:
             activity = edited_activity
     random_image = random.choice(background_images)
-    activity_style = f'<div class="schedule" style="background-image: url(\'{random_image}\');">{time_slot}: {activity}</div>'
+    activity_style = f'<div class="schedule schedule-image" style="background-image: url(\'{random_image}\');">{time_slot}: {activity}</div>'
     st.markdown(activity_style, unsafe_allow_html=True)
