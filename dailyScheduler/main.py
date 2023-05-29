@@ -38,7 +38,11 @@ css = """
 st.markdown(css, unsafe_allow_html=True)
 
 # List of background images
-background_images = ["D:\Stremlit-Projects\Extensions_S\dailyScheduler\image1.jpg", "D:\Stremlit-Projects\Extensions_S\dailyScheduler\image2.jpg", "D:\Stremlit-Projects\Extensions_S\dailyScheduler\image3.jpg", "D:\Stremlit-Projects\Extensions_S\dailyScheduler\image4.jpg"]
+background_images = ["https://github.com/RohanGodha/streamlit-Extension/blob/main/dailyScheduler/image1.jpg", 
+                     "https://github.com/RohanGodha/streamlit-Extension/blob/main/dailyScheduler/image2.jpg",
+                     "https://github.com/RohanGodha/streamlit-Extension/blob/main/dailyScheduler/image3.jpg",
+                     "https://github.com/RohanGodha/streamlit-Extension/blob/main/dailyScheduler/image4.jpg"
+                    ]
 
 # Create checkboxes for each activity
 for time_slot, activity in schedule:
